@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Guest List Manager</title>
+    <link rel="stylesheet" href="./eglm.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="figures-container">
+            <div class="title-details">
+            <h1>MYGUESTBOOK</h1>
+            <p>Welcome to myGuestBook!</p>
+            <div id="limitBar">
+                <div id="limit"></div>
+            </div>
+        </div>
+        <div class="guest-figures">
+            <p id="figures">2 / 10</p>
+        </div>
+        </div>
+    </div>
+
+    <form action="">
+        <input id="guestNameInput" type="text" placeholder="Write your guest name- your number">
+        <button id="newGuestName" type="submit">+</button>
+    </form>
+
+    <ul class="guest-list"></ul>
+
+
+    <script src="./eglm.js"></script>
+</body>
+</html>
