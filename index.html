@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Guest List Manager</title>
-    <link rel="stylesheet" href="./eglm.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Event Guest List Manager</title>
+        <link rel="stylesheet" href="./style.css">
 
-</head>
-<body>
-    <div class="container">
-        <div class="figures-container">
-            <div class="title-details">
-            <h1>MYGUESTBOOK</h1>
-            <p>Welcome to myGuestBook!</p>
-            <div id="limitBar">
-                <div id="limit"></div>
+    </head>
+    <body>
+        <!-- The main container => holds everything you see on the page -->
+        <div class="container">
+            <!-- The sub-container => holds title and welcome message -->
+            <div class="figures-container">
+                <div class="title-details">
+                <!-- The title -->    
+                <h1>MYGUESTBOOK</h1>
+                <!-- The welcome message -->
+                <p>Welcome to myGuestBook!</p>
             </div>
         </div>
-        <div class="guest-figures">
-            <p id="figures">2 / 10</p>
-        </div>
-        </div>
-    </div>
 
-    <form action="">
-        <input id="guestNameInput" type="text" placeholder="Write your guest name- your number">
-        <button id="newGuestName" type="submit">+</button>
-    </form>
+        <!-- The form => where the user types a guest name and submits it -->
+        <form id="guest-list">
+            <!-- Where the user types a guest name -->
+            <input id="guestNameInput" type="text" placeholder="Write your guest name">
+            <!-- Where the user clicks to submit the guest name  -->
+            <button id="newGuestName" type="submit">Submit</button>
+        </form>
 
-    <ul class="guest-list"></ul>
+        <!-- The empty guest list => where all the added guest names will be listed automatically -->
+        <ul class="guest-list"></ul>
+        
+        <!-- This JavaScript-file link => which links the JavaScript file that controls the page's behaviour such as adding guest names -->
+        <script src="./src/index.js"></script>
 
-
-    <script src="./eglm.js"></script>
-</body>
+    </body>
 </html>

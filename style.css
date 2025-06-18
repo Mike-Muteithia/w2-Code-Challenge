@@ -1,100 +1,158 @@
-*{
+/* Global Scope */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 :root {
-    ---background: ;
-    ---secondaryBackground: ;
-    --text: ;
-    --purple: ;
-    --teal: ;
+    --background: #E0F7FA;
+    --secondaryBackground: #B2EBF2;
+    --text: #333333;
+    --teal: #009688;
+    --danger: ;
+    --lightGray: #B0BEC5;
 }
 
+/* Body */
 body{
-    /* color */
-}
-
-.container {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 120px;
-    margin-bottom: 30px;
-    max-width: 500px;
-    background-color: blanchedalmond;
 }
 
+/* Container */
+.container {
+    text-align: center;
+    margin-top: 80px;
+}
+
+/* Title */
 .figures-container {
-    padding: 30px;
-    border-radius: 20px;
-    border: 3px solid; /*color */
+    padding: 20px 30px;
+    border-radius: 12px;
+    border: 2px solid var(--gray);
+    background-color: var(--secondaryBackground);
+    box-shadow: 0 4px 8px rgba(1, 1, 1, 2);
+}
+
+.title-details h1 {
+    color: var(--gray);
+    font-size: xx-large;
+    margin-bottom: 10px;
+}
+
+.title-details p {
+    font-size: medium;
+    color: var(--text)
+}
+
+/* Form */
+form#guest-list {
+    margin-top: 40px;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+input#guestNameInput {
+    padding: 5px 15px 0 ;
+    border-radius: 8px;
+    border: 1px solid var(--lightGray);
+    font-size: 14px;
+    color: var(--text);
+}
+
+input:focus {
+    border-color: var(--gray);
+    outline: none
+}
+
+/* Buttons */
+button {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: small;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 25%;
+}
+
+button#newGuestName {
+    color: black;
+    background-color: var(--background);
+    border: 1px solid var(--lightGray);
+}
+
+button.delete {
+    background-color: var(--background);
+    color: black;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+button.edit {
+    background-color: var(--background);
+    color: black;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+button.rsvp {
+    background-color: var(--background);
+    color: black;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+/* GuestList */
+ul.guest-list {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    list-style: none;
+}
+
+/* GuestItems */
+li.guest-item {
+    margin-bottom: 12px;
+    border-radius: 10px;
+    padding: 15px 20px;
+    border: 1px solid var(--lightGray);
+    background-color: var(--secondaryBackground);
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    width: 100%;
-}
-
-.title-details {
-    width: 100%
-}
-
-#limitBar {
-    width: 100%;
-    height: 10px;
-    background-color: burlywood;/* color */;
-    border-radius: 5px;
-    margin-top: 20px
-}
-
-#limit {
-    width: 50%;
-    height: 10px;
-    background-color: grey;
-    transition: all 0.3s ease;
-}
-
-#figures {
-    width: 100px;
-    height: 100px;
-    background-color: burlywood;/* color */
-    display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: 20px;
-    font-weight: bold;
+    transition: var(--secondaryBackground) 0.3s ease;
 }
 
-form {
-    margin-top: 60px;
-    width: 100%;
-    display: flex;
-    gap: 4px;
+/* Toggle RSVP */
+li.guest-item.attending {
+    border-color: var(--teal);
+    background-color:  #d1f7e3; /* Change color */
 }
 
-input {
-    flex: 0.4;
-    padding: 10px;
-    background-color: antiquewhite;/* color */
-    border: 1px solid;
-    border-radius: 10px;
-    outline: none;
-    color: darkgray; /* color */
+/* Span */
+li.guest-item span {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-right: 15px;
 }
 
-button {
-    padding: 16px;
-    width: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: antiquewhite; /* color */
-    color: black;
-    font-size: auto;
-    font-weight: bold;
-    outline: none;
-}
+
+
+
+
+
